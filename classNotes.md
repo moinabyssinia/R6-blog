@@ -8,3 +8,4 @@ Resource: a type of object that that you want users to be able to create instanc
 CRUD operations 
 
 Rails uses components called a model, a view and a controller to perform these CRUD operations
+
