@@ -1,4 +1,4 @@
-### Rails
+### Rails Notes
 The power of convention over configuration
 
 ### Rails Resource 
