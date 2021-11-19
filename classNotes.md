@@ -9,3 +9,11 @@ Resource: a type of object that that you want users to be able to create instanc
 
 Rails uses components called a model, a view and a controller to perform these CRUD operations
 
+### Rails Scaffold
+THey set everything up for you
+
+`bin/rails generate scaffold Post title:string`
+
+Do the migration before doing localhost
+
+`bin/rails db:migrate`
