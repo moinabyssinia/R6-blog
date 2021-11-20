@@ -26,19 +26,32 @@ Do the migration before doing localhost
 
 `bin/rails db:migrate`
 
-`bin/rails console`
+### How rails process a request
+* Rails looks at the request to figure out which code should handle it
+* request gets routed to action method on a controller
+* the controller loads the resource in from the databse using a model class
+* the controller rendes a view using the model data
 
-`post = Post.new`
-`post.title = "My Breakthrough"`
-`post.save`
+
+### Rails console
+`bin/rails console` - generate rails console 
+
+`pet = Pet.new`
+`pet.title = "Clara"`
+`pet.save`
 
 Use destroy and not delete 
 
+`pet = Pet.find(3)` - assign the pet with id = 3 to pet
+
+### Migration 
+
 To update the model
+`AddBodyToPosts` is a migration name
 `bin/rails generate migration AddBodyToPosts body:text`
 `bin/rails generate migration AddBreedToPets breed:string`
 
-To Update the database
+To Update the database after migration
 `bin/rails db:migrate`
 
 After this create an object - update the post - save it 
