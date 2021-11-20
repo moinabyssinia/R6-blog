@@ -58,3 +58,19 @@ After this create an object - update the post - save it
 
 ### Paritals
 In the log, `Rendered posts/_form.html.erb` the underscore indicates it contains a partial 
+
+### Strong parameters
+app>controllers>post_controller.rb - adjust post_params method to include desired parameters
+
+### Routes
+how rails sends a particular request to the particular controller that can handle it 
+
+`bin/rails routes` - check all the routes set up for the app
+
+`Rails.application.routes.draw do
+  get '/pets', to: 'pets#index'
+end
+`
+
+### Creating a controller to handle request
+`bin/rails generate controller Pages` - will add a pagescontroller.rb file 
