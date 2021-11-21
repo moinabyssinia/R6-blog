@@ -2,6 +2,6 @@
 <p> <%= @page.body %> </p>
 
 <%= link_to 'Edit', edit_page_path(@page) %>
-<%= link_to 'Delete', destroy_page_path(@page), method: :delete %>
+<%= link_to 'Delete', @page, method: :delete %>
 
  
