@@ -10,5 +10,11 @@ Rails.application.routes.draw do
 
   get '/pages/:id', to: 'pages#show', as: 'page'
 
+  post '/pages/', to: 'pages#create'
+
+  get '/pages/:id/edit', to: 'pages#edit', as: 'edit_page'
+
+  patch 'pages/:id', to: 'pages#update', as:'update_page'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
