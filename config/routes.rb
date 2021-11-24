@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # patch '/pages/:id', to: 'pages#update', as: 'update_page'
 
-  # delete '/pages/:id', to: 'pages#destroy', as: 'destroy_page'
+  # delete '/pages/:id', to: yarn remove @rails/webpacker'pages#destroy', as: 'destroy_page'
 
   resources :pages
 
