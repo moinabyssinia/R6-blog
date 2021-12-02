@@ -81,3 +81,5 @@ end
 #### Resources 
 https://dev.to/milandhar/unit-testing-in-rails-4oke
 https://dev.to/ionabrabender/testing-crud-with-rspec-and-rails-186k
+
+`rails generate rspec:install` - to generate spec files necessary for testing 
