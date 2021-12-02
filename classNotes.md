@@ -74,3 +74,10 @@ end
 
 ### Creating a controller to handle request
 `bin/rails generate controller Pages` - will add a pagescontroller.rb file 
+
+
+### Testing - Unit Testing 
+
+#### Resources 
+https://dev.to/milandhar/unit-testing-in-rails-4oke
+https://dev.to/ionabrabender/testing-crud-with-rspec-and-rails-186k

@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
     def index
         @pages = Page.all
+        logger.info("\nTotal number of pages is #{@pages.length}")
     end
 
     def show
