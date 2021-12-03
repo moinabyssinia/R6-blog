@@ -74,3 +74,30 @@ end
 
 ### Creating a controller to handle request
 `bin/rails generate controller Pages` - will add a pagescontroller.rb file 
+
+### Setting up a `has_many` association between the Post and Comment models
+
+
+### adding a comment model
+`bin/rails generate model Comment content:text name:string`
+`bin/rails db:migrate`
+
+### adding foreign key to the comments table
+### creates a generation file; :index to index it 
+`bin/rails g migration AddPostToComments post_id:integer:index`
+`bin/rails db:migrate`
+
+### manually adding comments using console
+`post = Post.first`
+`comment = post.comments.build`
+`comment.content = "It was good to see them together even briefly"`
+`comment.name = "Michael Tadesse"`
+`comment.save`
+
+### to create and save right away 
+`post.comments.create(content: "It was good to see them together even briefly", name: "Michael"`
+
+### to view comments 
+`pp Post.last.comments`
+`pp Post.first.comments`
+`pp Comment.all`
