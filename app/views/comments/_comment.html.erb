@@ -1,4 +1,9 @@
 <div>
     <strong> <%= comment.name %> </strong>
     <%= comment.content %>
+
+    <div class = "comment-admin">
+        <%= link_to "Edit", post_edit_comment_path(@post, comment) %>
+    </div>
+
 </div>
