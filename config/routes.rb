@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do 
+    get '/comments', to: 'comments#index', as: 'comments'
+    post '/comments', to: 'comments#create'
+    get '/comments/new', to: 'comments#new', as: 'new_comment'
+    get 'comments/:id', to: 'comments#show', as: 'comment'
+    get '/comments/:id/edit', to: 'comments#show', as: 'edit_comment'
+    patch '/comments/:id', to: 'comments#update'
+    delete '/comments/:id', to: 'comments#destroy'
+  end 
+
+  # or just replace the above line of code as follows:
+  # resources :posts do 
+    # resources :comments
+  # end
+
 
   # # get requests for the /pages path should go to
   # # the PagesController's index method 

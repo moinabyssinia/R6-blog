@@ -101,3 +101,41 @@ end
 `pp Post.last.comments`
 `pp Post.first.comments`
 `pp Comment.all`
+
+### connecting comments to posts
+but a comment can have only one post - thus it belongs to ...
+when setting up a `has_many` association from one model to another
+make sure you setup also a `belongs_to` association from this model to the other
+
+`belongs_to :post`
+
+### rollback changes 
+`bin/rails db:rollback`
+
+### destroy a migration
+`bin/rails destroy migration AddPostToComments`
+
+### list out all migrations
+`ls db/migrate`
+
+### handling many-to-many relationships
+`bin/rails g migration CreateJoinTableUsersForums users forums`
+`has_and_belongs_to_many :forums` 
+
+### appending forums to users
+`user = User.find_by(name: "Michael")`
+`user.forums << Forum.find_by(name: "Ruby")`
+
+### has_many_through relationships 
+user - subscription - magazine
+
+`bin/rails g model Subscription months:integer subscriber_id:integer magazine_id:integer`
+update subscription model
+`belongs_to :subscriber`
+`belongs_to :magazine`
+update subscriber model
+`has_many :subscriptions`
+`has_many : magazine, through: :subscriptions`
+update magazine model
+`has_many :subscriptions`
+`has_many :subscribers, through: :subscriptions`
