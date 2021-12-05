@@ -1,4 +1,4 @@
-### Rails Notes
+### Rails Notes - Treehouse
 The power of convention over configuration
 
 ### Model-View-Controller (MVC) arichitecture
