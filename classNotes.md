@@ -76,6 +76,7 @@ end
 `bin/rails generate controller Pages` - will add a pagescontroller.rb file 
 
 ----------------------------------------------------------------------------
+## Active Record Associations
 
 ### adding comment model to the app
 `bin/rails g model Comment content:text name:string`
