@@ -74,3 +74,18 @@ end
 
 ### Creating a controller to handle request
 `bin/rails generate controller Pages` - will add a pagescontroller.rb file 
+
+----------------------------------------------------------------------------
+
+### adding comment model to the app
+`bin/rails g model Comment content:text name:string`
+`bin/rails db:migrate`
+
+adding the post id to the comments and adding index 
+`bin/rails g migration AddPostToComments post_id:integer:index`
+
+run the above migration 
+`bin/rails db:migrate`
+
+create new comments from the console
+`post.comments.create(content: "cool", name: "Alena")`
