@@ -90,3 +90,18 @@ run the above migration
 
 create new comments from the console
 `post.comments.create(content: "cool", name: "Alena")`
+
+use belongs to so that comments can access post too
+`belongs_to :post`
+
+rolling back migrations
+`bin/rails db:rollback`
+
+deleting migrations
+`bin/rails destroy migration AddPostToComments`
+
+to list out all migrations
+`ls db/migrate`
+
+to generate comment model with foreign key added to it with reference
+`bin/rails g model Comment content:text name:string post:references`
